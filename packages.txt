@@ -13,3 +13,4 @@ iproute2
 tcpdump
 nmap
 dirb
+golang-go
