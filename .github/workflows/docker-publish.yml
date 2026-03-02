@@ -15,6 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -31,7 +34,11 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/rero:latest
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/rero:latest
+            ${{ secrets.DOCKER_USERNAME }}/rero:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   security-scan:
     runs-on: ubuntu-latest

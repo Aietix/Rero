@@ -1,4 +1,3 @@
-curl
 wget
 git
 vim
@@ -14,3 +13,5 @@ tcpdump
 nmap
 dirb
 golang-go
+redis-tools
+mongosh
