@@ -1,3 +1,5 @@
+curl
+gnupg
 wget
 git
 vim
@@ -14,4 +16,3 @@ nmap
 dirb
 golang-go
 redis-tools
-mongosh
