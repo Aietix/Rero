@@ -16,3 +16,5 @@ nmap
 dirb
 golang-go
 redis-tools
+nodejs
+npm
