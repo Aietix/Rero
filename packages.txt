@@ -18,3 +18,4 @@ golang-go
 redis-tools
 nodejs
 npm
+postgresql-client
