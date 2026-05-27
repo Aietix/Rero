@@ -19,3 +19,4 @@ redis-tools
 nodejs
 npm
 postgresql-client
+ansible
